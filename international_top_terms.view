@@ -1,0 +1,49 @@
+view: international_top_terms {
+
+    sql_table_name: `cloud-tools-looker-lookml.google_terms_trends.international_top_terms`;;
+
+    dimension: term {
+        type: string
+        sql: ${TABLE}.term;;
+    }
+
+    dimension: week {
+        type: date
+        sql: ${TABLE}.week;;
+    }
+
+    dimension: score {
+        type: number
+        sql: ${TABLE}.score;;
+    }
+
+    dimension: rank {
+        type: number
+        sql: ${TABLE}.rank;;
+    }
+
+    dimension: country_name {
+        type: string
+        sql: ${TABLE}.country_name;;
+    }
+
+    dimension: country_code {
+        type: string
+        sql: ${TABLE}.country_code;;
+    }
+
+    dimension: region_name {
+        type: string
+        sql: ${TABLE}.region_name;;
+    }
+
+    dimension: region_code {
+        type: string
+        sql: ${TABLE}.region_code;;
+    }
+
+    dimension: refresh_date {
+        type: date
+        sql: ${TABLE}.refresh_date;;
+    }
+}

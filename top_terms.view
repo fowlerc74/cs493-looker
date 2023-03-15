@@ -1,0 +1,39 @@
+view: top_terms {
+
+    sql_table_name: `cloud-tools-looker-lookml.google_terms_trends.top_terms`;;
+
+    dimension: refresh_date {
+        type: date
+        sql: ${TABLE}.refresh_date;;
+    }
+
+    dimension: dma_name {
+        type: string
+        sql: ${TABLE}.dma_name;;
+    }
+
+    dimension: dma_id {
+        type: number
+        sql: ${TABLE}.dma_id;;
+    }
+
+    dimension: term {
+        type: string
+        sql: ${TABLE}.term;;
+    }
+
+    dimension: week {
+        type: date
+        sql: ${TABLE}.week;;
+    }
+
+    dimension: score {
+        type: number
+        sql: ${TABLE}.score;;
+    }
+
+    dimension: rank {
+        type: number
+        sql: ${TABLE}.rank;;
+    }
+}
