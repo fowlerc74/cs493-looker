@@ -1,0 +1,10 @@
+include: "/views/**/top_terms.view"
+include: "/views/**/top_rising_terms.view"
+
+explore: top_terms {
+    join: top_rising_terms {
+        type: left_outer
+        sql_on: ${top_terms.term} = ${top_rising_terms.term}
+        relationship: many_to_many
+    }
+}
